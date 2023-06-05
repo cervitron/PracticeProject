@@ -1,7 +1,7 @@
 name: BuildDeploy
 on: push
+runs-on: ubuntu-latest
 jobs:
-  runs-on: ubuntu-latest  
   checkout:
     steps:
       - name: checkout
