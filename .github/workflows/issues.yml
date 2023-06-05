@@ -7,6 +7,4 @@ jobs:
     steps:
       - name: issues
         run: | 
-          echo "acion: ${{github.action}}" 
-          echo "repositorio: ${{github.action_repository}}" 
-          echo "actor: ${{github.actor}}" 
+          echo "acion: ${{toJSON(github.event)}}" 
