@@ -1,4 +1,4 @@
-name: WorkFlow_Issues
+name: WorkFlows_Issues
 on: issues
 
 jobs:
