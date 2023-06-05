@@ -1,17 +1,32 @@
 name: BuildDeploy
 on: push
 jobs:
-  build:
+  
+  checkout:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v3
-      - name: install dependencies
-        run: npm ci
+        uses: actions/checkout@v3 
+  
+  installDependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install
+      - run: npm ci
+  
+  build:
+    runs-on: ubuntu-latest
+    steps:
       - name: build
         run: npm run build
-      - name: run test
-        run: npm test  
+  
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: tests
+      - run: npm test    
+  
+     
   deploy:
     needs: build 
     runs-on: ubuntu-latest
