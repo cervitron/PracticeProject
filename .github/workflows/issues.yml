@@ -1,12 +1,12 @@
-name: issues
+name: WorkFlow_Issues
 on: issues
 
 jobs:
   display:
     runs-on: ubuntu-latest
     steps:
-      name: issues
-      run: | 
-        echo "acion: ${{github.action}}" 
-        echo "repositorio: ${{github.action_repository}}" 
-        echo "actor: ${{github.actor}}" 
+      - name: issues
+        run: | 
+          echo "acion: ${{github.action}}" 
+          echo "repositorio: ${{github.action_repository}}" 
+          echo "actor: ${{github.actor}}" 
