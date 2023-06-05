@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: install
-      - run: npm ci
+        run: npm ci
   
   build:
     runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: tests
-      - run: npm test    
+        run: npm test    
   
      
   deploy:
